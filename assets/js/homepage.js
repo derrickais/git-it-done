@@ -47,8 +47,9 @@ var displayUserRepos = function(repos, searchTerm){
         
         var repoName = repos[i].owner.login + "/" + repos[i].name;
 
-        var repoEl = document.createElement("div");
+        var repoEl = document.createElement("a");
         repoEl.classList = "list-item flex-row justify-space-between align-center";
+        repoEl.setAttribute("href", "./single-repo.html?=" + repoName);
 
         var titleEl = document.createElement("span");
         titleEl.textContent = repoName;
